@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>PixelPDF: Your Image to PDF Magic</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <h1>PixelPDF</h1>
+        <p class="tagline">Transform Images into PDFs with a Snap!</p>
+        <div class="input-area">
+          <label for="image-input" class="upload-label">
+            Choose Images
+            <input
+              type="file"
+              id="image-input"
+              multiple
+              accept="image/*"
+              hidden
+            />
+          </label>
+          <button class="convert-btn" onclick="convertImagesToPDF()">
+            Convert Now
+          </button>
+          <div id="file-list"></div>
+          <!-- Placeholder for file names -->
+        </div>
+
+        <a id="download-link" class="download-link" style="display: none"
+          >Download Your PDF</a
+        >
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
